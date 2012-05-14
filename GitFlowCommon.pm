@@ -5,7 +5,7 @@ use warnings;
 use Data::Dumper;
 use MIME::Base64;
 
-use LWP::UserAgent 6;
+use LWP::UserAgent;
 
 $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 

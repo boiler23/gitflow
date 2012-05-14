@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 use GitFlowCommon;
 
 if ("$ARGV[0]" eq "start") {

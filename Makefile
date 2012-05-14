@@ -35,12 +35,12 @@ else
 endif
 
 # files that need mode 755
-EXEC_FILES=git-flow
+EXEC_FILES =git-flow
+EXEC_FILES+=git-flow-feature.pl
 
 # files that need mode 644
 SCRIPT_FILES =git-flow-init
 SCRIPT_FILES+=git-flow-feature
-SCRIPT_FILES+=git-flow-feature.pl
 SCRIPT_FILES+=GitFlowCommon.pm
 SCRIPT_FILES+=git-flow-hotfix
 SCRIPT_FILES+=git-flow-release

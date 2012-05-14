@@ -216,8 +216,10 @@ cmd_start() {
 		die "Could not create feature branch '$BRANCH'"
 	fi
 
-	# start progress for jira ticket
-	perl git-flow-feature.pl start $1
+    gitflowpath=$(which git-flow);
+    libpath=$(dirname $gitflowpath);
+    # start progress for jira ticket
+    perl -S -I$libpath git-flow-feature.pl start $1
 
 	echo
 	echo "Summary of actions:"
@@ -337,9 +339,11 @@ cmd_finish() {
 
 	# when no merge conflict is detected, just clean up the feature branch
 	helper_finish_cleanup
-
-	# stop progress for jira ticket
-	perl git-flow-feature.pl finish $1
+    
+    gitflowpath=$(which git-flow);
+    libpath=$(dirname $gitflowpath);
+    # stop progress for jira ticket
+    perl -S -I$libpath git-flow-feature.pl finish $1
 }
 
 helper_finish_cleanup() {
